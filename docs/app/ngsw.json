@@ -1,0 +1,121 @@
+{
+  "configVersion": 1,
+  "timestamp": 1689540046659,
+  "index": "/db-dummy/app/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/db-dummy/app/favicon.ico",
+        "/db-dummy/app/index.html",
+        "/db-dummy/app/main.dcb2295f87ad4579.js",
+        "/db-dummy/app/manifest.webmanifest",
+        "/db-dummy/app/polyfills.c900945d1499a818.js",
+        "/db-dummy/app/runtime.23f6f9dd991c932b.js",
+        "/db-dummy/app/styles.a05fffcb17882452.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/db-dummy/app/assets/fonts/screen_sans_bold.ttf",
+        "/db-dummy/app/assets/fonts/screen_sans_regular.ttf",
+        "/db-dummy/app/assets/icons/ic_actionbar_add_ticket_plus.svg",
+        "/db-dummy/app/assets/icons/ic_arrow_back_black_24.svg",
+        "/db-dummy/app/assets/icons/ic_comfort.png",
+        "/db-dummy/app/assets/icons/ic_filter.svg",
+        "/db-dummy/app/assets/icons/ic_launcher.png",
+        "/db-dummy/app/assets/icons/ic_prod_change.png",
+        "/db-dummy/app/assets/icons/ic_qr_code.webp",
+        "/db-dummy/app/assets/icons/ic_schedule_aktiv.png",
+        "/db-dummy/app/assets/icons/ic_schedule_inaktiv.png",
+        "/db-dummy/app/assets/icons/ic_ticket_multiple_aktiv.png",
+        "/db-dummy/app/assets/icons/ic_ticket_multiple_inaktiv.png",
+        "/db-dummy/app/assets/icons/icon-128x128.png",
+        "/db-dummy/app/assets/icons/icon-144x144.png",
+        "/db-dummy/app/assets/icons/icon-152x152.png",
+        "/db-dummy/app/assets/icons/icon-192x192.png",
+        "/db-dummy/app/assets/icons/icon-384x384.png",
+        "/db-dummy/app/assets/icons/icon-512x512.png",
+        "/db-dummy/app/assets/icons/icon-72x72.png",
+        "/db-dummy/app/assets/icons/icon-96x96.png",
+        "/db-dummy/app/assets/icons/menu.svg",
+        "/db-dummy/app/ic_schedule_aktiv.44f61bfb84de6337.png",
+        "/db-dummy/app/ic_schedule_inaktiv.279ba6bc93810cd6.png",
+        "/db-dummy/app/ic_ticket_multiple_aktiv.193694c45a30b458.png",
+        "/db-dummy/app/ic_ticket_multiple_inaktiv.b146869e070d414d.png",
+        "/db-dummy/app/screen_sans_bold.3c777f230d55805b.ttf",
+        "/db-dummy/app/screen_sans_regular.8cfdddb238c461b6.ttf"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/db-dummy/app/assets/fonts/screen_sans_bold.ttf": "ef3493a836c83c95f21b988d16136633473f9a80",
+    "/db-dummy/app/assets/fonts/screen_sans_regular.ttf": "96323d4058ec787e7d2d2e4a8829ce62f5102cfa",
+    "/db-dummy/app/assets/icons/ic_actionbar_add_ticket_plus.svg": "04f18f7792ccca28cde88e861196951e14749334",
+    "/db-dummy/app/assets/icons/ic_arrow_back_black_24.svg": "8cae43ea8d5f9a21e3e0d0396ee7730346a36b65",
+    "/db-dummy/app/assets/icons/ic_comfort.png": "4e344711f1d605e0ee2826461054553cae6c8a32",
+    "/db-dummy/app/assets/icons/ic_filter.svg": "376fbbf622f55432a37ecf71f5e519c4a1091739",
+    "/db-dummy/app/assets/icons/ic_launcher.png": "dac1b01c0d2d33fe592be06cfaf91ab960f72e8d",
+    "/db-dummy/app/assets/icons/ic_prod_change.png": "ed57b9b7574d63f6448d039056182dd31d24491c",
+    "/db-dummy/app/assets/icons/ic_qr_code.webp": "bb18da51fe2f16173559e5878f45025278f57f7f",
+    "/db-dummy/app/assets/icons/ic_schedule_aktiv.png": "5819d6a403272f4957b43910862ad4ce1edf32f1",
+    "/db-dummy/app/assets/icons/ic_schedule_inaktiv.png": "14d7f73c20bdf60b7914046e0c58749dcaf4e86a",
+    "/db-dummy/app/assets/icons/ic_ticket_multiple_aktiv.png": "2737072ccec9aba0a1eeee18988dcbe8465e2970",
+    "/db-dummy/app/assets/icons/ic_ticket_multiple_inaktiv.png": "28a68979b34fafd68d2c868e7584a2d578916bd6",
+    "/db-dummy/app/assets/icons/icon-128x128.png": "34027242ada0be2f94041feca486ba7b466d4977",
+    "/db-dummy/app/assets/icons/icon-144x144.png": "e6437b5de36e0934c4d05769884bd43825bdea5a",
+    "/db-dummy/app/assets/icons/icon-152x152.png": "84e30de1669accfdfed99b1294857caa63226e1b",
+    "/db-dummy/app/assets/icons/icon-192x192.png": "a394e77c4c69decfec30d7271d495f5c17de43c3",
+    "/db-dummy/app/assets/icons/icon-384x384.png": "6410bebe8d63832669d11c69c2e2d00b08b4e9b7",
+    "/db-dummy/app/assets/icons/icon-512x512.png": "f61cc8894ec8e02eb0765d1e8b2caeae99f1b78d",
+    "/db-dummy/app/assets/icons/icon-72x72.png": "ad876dbe96f9ea7c36c85f242262138e99ac78f5",
+    "/db-dummy/app/assets/icons/icon-96x96.png": "7b0b5ccffcc0c8cd07460b3af052ef7b78e7aff9",
+    "/db-dummy/app/assets/icons/menu.svg": "f3fc478ab061b28363f3bff54e1e14cfddc49553",
+    "/db-dummy/app/favicon.ico": "3f1d6471d80160686799cd0526df2fd8cf91187d",
+    "/db-dummy/app/ic_schedule_aktiv.44f61bfb84de6337.png": "5819d6a403272f4957b43910862ad4ce1edf32f1",
+    "/db-dummy/app/ic_schedule_inaktiv.279ba6bc93810cd6.png": "14d7f73c20bdf60b7914046e0c58749dcaf4e86a",
+    "/db-dummy/app/ic_ticket_multiple_aktiv.193694c45a30b458.png": "2737072ccec9aba0a1eeee18988dcbe8465e2970",
+    "/db-dummy/app/ic_ticket_multiple_inaktiv.b146869e070d414d.png": "28a68979b34fafd68d2c868e7584a2d578916bd6",
+    "/db-dummy/app/index.html": "92b2146295730c15bb4683b6c435434fb955016d",
+    "/db-dummy/app/main.dcb2295f87ad4579.js": "1350d4a11bc3ec21b1a008ddc9d3afa3cd968546",
+    "/db-dummy/app/manifest.webmanifest": "5fff15fef50d70cb5fe18121e0519878d4277147",
+    "/db-dummy/app/polyfills.c900945d1499a818.js": "36fd641d71e02943c774595b349d5cfbe5d97380",
+    "/db-dummy/app/runtime.23f6f9dd991c932b.js": "29c537edfa4dc44e004869f2ea00bf8365f599c3",
+    "/db-dummy/app/screen_sans_bold.3c777f230d55805b.ttf": "ef3493a836c83c95f21b988d16136633473f9a80",
+    "/db-dummy/app/screen_sans_regular.8cfdddb238c461b6.ttf": "96323d4058ec787e7d2d2e4a8829ce62f5102cfa",
+    "/db-dummy/app/styles.a05fffcb17882452.css": "531ec48bb7a2d1ed02d5678923cf3426ce7fb7e3"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
