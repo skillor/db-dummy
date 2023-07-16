@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "db-fakinator": {
+    "db-dummy": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/db-fakinator",
+            "outputPath": "dist/db-dummy",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "db-fakinator:build:production"
+              "browserTarget": "db-dummy:build:production"
             },
             "development": {
-              "browserTarget": "db-fakinator:build:development"
+              "browserTarget": "db-dummy:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "db-fakinator:build"
+            "browserTarget": "db-dummy:build"
           }
         },
         "test": {

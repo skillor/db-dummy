@@ -1,5 +1,5 @@
 {
-  "name": "db-fakinator",
+  "name": "db-dummy",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
