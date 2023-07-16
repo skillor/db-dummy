@@ -1,0 +1,10 @@
+<dialog class="modal modal-bottom modal-open">
+  <div class="modal-box bg-white flex flex-col gap-2">
+    <h3 class="font-bold text-lg" style="font-family: Arial, sans-serif;">Authorize</h3>
+    <input type="password" placeholder="Token" class="input input-bordered w-full" [(ngModel)]="authorization" />
+    <div class="modal-action pt-4">
+      <button *ngIf="!loading" class="btn" (click)="authorize()">Authorize</button>
+      <button *ngIf="loading" class="btn"><div class="loading loading-spinner"></div></button>
+    </div>
+  </div>
+</dialog>

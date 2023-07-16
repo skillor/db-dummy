@@ -1,0 +1,62 @@
+<div class="flex flex-col overflow-y-auto" style="height: calc(100vh - 10.1rem);">
+  <div class="flex flex-col items-center">
+    <div class="pt-3 text-lg text-gray-500">Abfahrt am</div>
+    <div class="pt-2 text-5xl font-bold">{{ticketService.getSelectedTicket().getDateShort()}}</div>
+    <div class="pt-2 text-lg font-bold">{{ticketService.getSelectedTicket().getStartBhf()}}</div>
+  </div>
+  <div class="mt-4" style="filter: drop-shadow(0 0 0.5rem rgba(0,0,0,0.1))">
+    <div *ngFor="let section of ticketService.getSelectedTicket().getSections(); let first = first; let last = last">
+      <div *ngIf="section.type == 'train'" class="bg-white pt-4 pb-8" [class.shadow-lg]="last">
+        <div class="h-full"></div>
+        <div class="flex flex-row">
+          <div class="ml-2 rounded-lg bg-black self-center dot start" [class.first]="first"></div>
+          <div class="ml-4 font-bold">
+            {{formatTime(section.abfahrtsZeitpunkt)}}
+          </div>
+          <div class="ml-5 font-bold">
+            {{section.abfahrtsOrt}}
+          </div>
+          <div class="ml-auto mr-2">
+            Gl. {{section.abfahrtsGleis}}
+          </div>
+        </div>
+        <div class="ml-24 py-5">
+          {{section.verkehrsmittel.name}}
+        </div>
+        <div class="flex flex-row">
+          <div class="ml-2 rounded-lg bg-black self-center dot end"></div>
+          <div class="ml-4 font-bold">
+            {{formatTime(section.ankunftsZeitpunkt)}}
+          </div>
+          <div class="ml-5 font-bold">
+            {{section.ankunftsOrt}}
+          </div>
+          <div class="ml-auto mr-2">
+            Gl. {{section.ankunftsGleis}}
+          </div>
+        </div>
+      </div>
+      <div *ngIf="section.type == 'change'">
+        <div class="bg-slate-100 flex flex-row py-3">
+          <div class="ml-2 self-center dot change"></div>
+          <img class="ml-10 h-5 w-auto" src="assets/icons/ic_prod_change.png">
+          <div class="ml-5 font-bold text-gray-700">{{section.t}} Umstiegszeit</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="px-3 pt-6 pb-4 bg-slate-100 text-gray-700 text-sm">
+    Gebucht am {{ticketService.getSelectedTicket().getBuchungsDate()}} um {{ticketService.getSelectedTicket().getBuchungsTime()}}
+  </div>
+  <div class="bg-white px-6 py-4 flex flex-row gap-1 shadow-[0_-10px_20px_0_rgba(0,0,0,0.1)]">
+    <a class="btn h-10 min-h-0 bg-white border-gray-700 normal-case rounded grow font-normal">Sitzplatz reservieren</a>
+    <div class="dropdown dropdown-top dropdown-end dropdown-open">
+      <label #dropdownButton tabindex="0" class="btn h-10 min-h-0 bg-white border-gray-700 rounded text-gray font-normal">...</label>
+      <ul #dropdownContent tabindex="0" [class.hidden]="!showDropdown" class="dropdown-content p-0 z-[1] w-48 bg-white" style="right: -1.5rem; filter: drop-shadow(0 0 0.5rem rgba(0,0,0,0.3))">
+        <li><a class="flex rounded-none px-3 py-3 active:bg-gray-300">Speichern im Kalender</a></li>
+        <li><a routerLink="/bahncards" class="flex rounded-none px-3 py-3 active:bg-gray-300">BahnCard anzeigen</a></li>
+        <li><a class="flex rounded-none px-3 py-3 active:bg-gray-300">Aktuelle Alternativen</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

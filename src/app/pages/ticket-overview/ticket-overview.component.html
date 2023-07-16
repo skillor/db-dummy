@@ -1,0 +1,22 @@
+<div>
+  <div class="nav-db flex h-14 shadow-xl items-center">
+    <a routerLink="/tickets"><img class="ml-3 mr-7 w-6" src="assets/icons/ic_arrow_back_black_24.svg"></a>
+    <span class="font-bold" style="font-size: 1.05rem;">{{getTitle()}}</span>
+  </div>
+  <div class="mt-3 mb-1 mx-2 flex flex-row items-center gap-3">
+    <div class="text-black/50 leading-tight">
+      <div>{{ticketService.getSelectedTicket().getDate()}}</div>
+      <div>{{ticketService.getSelectedTicket().getID()}}</div>
+    </div>
+    <div>
+      {{ticketService.getSelectedTicket().getStartBhf()}} - {{ticketService.getSelectedTicket().getEndBhf()}}
+    </div>
+  </div>
+  <div class="w-full flex flex-row bg-slate-100 px-4 shadow-lg">
+    <a routerLink="code" routerLinkActive="border-b-2 border-db-red" class="flex grow justify-center p-3"><img class="h-6 w-auto ic ticket" routerLinkActive="active"></a>
+    <a routerLink="plan" routerLinkActive="border-b-2 border-db-red" class="flex grow justify-center p-3"><img class="h-6 w-auto ic schedule" routerLinkActive="active"></a>
+  </div>
+  <div [@routeAnimations]="getRouteAnimationData()">
+    <router-outlet></router-outlet>
+  </div>
+</div>

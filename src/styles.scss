@@ -1,0 +1,55 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: 'Screen Sans';
+  src: url('assets/fonts/screen_sans_bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Screen Sans';
+  src: url('assets/fonts/screen_sans_regular.ttf');
+  font-style: normal;
+}
+
+* {
+  font-family: 'Screen Sans';
+  user-select: none;
+  -webkit-user-select: none;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+body {
+  overscroll-behavior-y: none;
+}
+
+.httext, .httext * {
+  font-family: Arial, sans-serif !important;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+.ic.ticket.active {
+  content: url('assets/icons/ic_ticket_multiple_aktiv.png');
+}
+
+.ic.schedule.active {
+  content: url('assets/icons/ic_schedule_aktiv.png');
+}
+
+.ic.ticket {
+  content: url('assets/icons/ic_ticket_multiple_inaktiv.png');
+}
+
+.ic.schedule {
+  content: url('assets/icons/ic_schedule_inaktiv.png');
+}
+
+.db-red {
+  color: #ec0016;
+}

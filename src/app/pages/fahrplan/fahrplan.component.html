@@ -1,0 +1,30 @@
+<div>
+  <div class="nav-db flex h-14 shadow-xl items-center">
+    <a routerLink="/tickets"><img class="ml-3 mr-7 w-6" src="assets/icons/ic_arrow_back_black_24.svg"></a>
+    <span class="font-bold" style="font-size: 1.05rem;">Fahrplan</span>
+  </div>
+</div>
+<div *ngIf="(searchPipe$ | async) as fahrplan; else loading" class="flex flex-col pt-4 px-4 gap-4">
+  <div *ngFor="let verbindung of fahrplan.verbindungen" class="border-4 rounded gap-2 p-4">
+    <div *ngFor="let abschnitt of makeSections(verbindung.verbindungsAbschnitte); let last = last">
+      <div *ngIf="abschnitt.type == 'train'">
+        <div class="flex flex-row gap-5">
+          <div>{{formatTime(abschnitt.abfahrtsZeitpunkt)}}</div>
+          <div>{{abschnitt.abfahrtsOrt}}</div>
+        </div>
+        <div class="ml-16">{{abschnitt.verkehrsmittel.name}}</div>
+        <div class="flex flex-row gap-5">
+          <div>{{formatTime(abschnitt.ankunftsZeitpunkt)}}</div>
+          <div>{{abschnitt.ankunftsOrt}}</div>
+        </div>
+      </div>
+      <div *ngIf="abschnitt.type == 'change'" class="text-sm bg-slate-100">... {{abschnitt.t}} Umstiegszeit</div>
+    </div>
+    <button (click)="buche(verbindung.verbindungsAbschnitte)" class="btn btn-sm w-full mt-2">Buchen</button>
+  </div>
+</div>
+<ng-template #loading>
+  <div class="w-full flex justify-center">
+    <div class="loading loading-spinner"></div>
+  </div>
+</ng-template>

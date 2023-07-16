@@ -1,0 +1,46 @@
+<div class="nav-db flex h-14 shadow-xl items-center">
+  <button><img class="ml-3 mr-7 w-6" src="assets/icons/menu.svg"></button>
+  <span class="font-bold" style="font-size: 1.05rem;">Meine Tickets</span>
+  <button (click)="deletingTickets = !deletingTickets" class="ml-auto" [class.bg-slate-300]="deletingTickets"><img class="w-6" src="assets/icons/ic_filter.svg"></button>
+  <button (click)="addingTicket = true" class="ml-5 mr-3"><img class="w-6" src="assets/icons/ic_actionbar_add_ticket_plus.svg"></button>
+</div>
+<div class="px-5 pt-6 overflow-y-auto" style="height: calc(100vh - 3.5rem);">
+  <app-ticket-preview *ngFor="let ticket of ticketService.tickets | keyvalue" [ticket]="ticket.value" [deleting]="deletingTickets"></app-ticket-preview>
+</div>
+<dialog class="modal modal-bottom" [class.modal-open]="addingTicket">
+  <div class="modal-box bg-white flex flex-col gap-2">
+    <h3 class="font-bold text-lg">Ticket hinzufügen</h3>
+    <input type="text" placeholder="Ticketnummer" class="input input-bordered input-sm w-full" [(ngModel)]="addTicketNumber" />
+    <input type="text" placeholder="Nachname" class="input input-bordered input-sm w-full" [(ngModel)]="addTicketLastname" />
+    <button *ngIf="!loadingTicket" class="btn btn-sm" (click)="addTicket()">Hinzufügen</button>
+    <button *ngIf="loadingTicket" class="btn btn-sm"><div class="loading loading-spinner"></div></button>
+    <div>Von</div>
+    <div class="dropdown dropdown-bottom dropdown-end">
+      <input #journeyStart tabindex="0" type="text" placeholder="Startbahnhof" class="input input-bordered input-sm w-full" />
+      <ul tabindex="0" class="dropdown-content p-0 z-[1] w-full bg-white max-h-[10rem] overflow-y-auto" style="filter: drop-shadow(0 0 0.5rem rgba(0,0,0,0.3))">
+        <li *ngFor="let r of journeyStartResults"><a (click)="selectJourneyStart(r)" class="flex rounded-none px-3 py-3 active:bg-gray-300">{{r.name}}</a></li>
+        <li *ngIf="journeyStartResults.length == 0"><div class="loading loading-spinner m-2"></div></li>
+      </ul>
+    </div>
+    <div>Nach</div>
+    <div class="dropdown dropdown-bottom dropdown-end">
+      <input #journeyEnd tabindex="0" type="text" placeholder="Endbahnhof" class="input input-bordered input-sm w-full" />
+      <ul tabindex="0" class="dropdown-content p-0 z-[1] w-full bg-white max-h-[10rem] overflow-y-auto" style="filter: drop-shadow(0 0 0.5rem rgba(0,0,0,0.3))">
+        <li *ngFor="let r of journeyEndResults"><a (click)="selectJourneyEnd(r)" class="flex rounded-none px-3 py-3 active:bg-gray-300">{{r.name}}</a></li>
+        <li *ngIf="journeyEndResults.length == 0"><div class="loading loading-spinner m-2"></div></li>
+      </ul>
+    </div>
+    <div>Abfahrt</div>
+    <input type="datetime-local" class="input input-bordered input-sm w-full min-h-[2rem]" [(ngModel)]="abfahrt">
+    <input type="text" placeholder="Anrede" class="input input-bordered input-sm w-full" [(ngModel)]="ticketService.person.anrede" />
+    <input type="text" placeholder="Max Mustermann" class="input input-bordered input-sm w-full" [(ngModel)]="ticketService.person.name" />
+
+    <button (click)="sucheTicket()" class="btn btn-sm">Suchen</button>
+    <div class="modal-action">
+      <button class="btn" (click)="addingTicket = false">Abbrechen</button>
+    </div>
+  </div>
+  <div class="modal-backdrop">
+    <button (click)="addingTicket=false">close</button>
+  </div>
+</dialog>

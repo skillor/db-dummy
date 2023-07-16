@@ -1,0 +1,58 @@
+.ticket-wrap {
+    filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.3));
+}
+
+.ticket-top {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.ticket {
+    clip-path: polygon(100% 0%,
+            100% 4.50rem,
+            calc(100% - 0.00rem) 4.50rem,
+            calc(100% - 0.08rem) 4.51rem,
+            calc(100% - 0.15rem) 4.52rem,
+            calc(100% - 0.23rem) 4.55rem,
+            calc(100% - 0.29rem) 4.60rem,
+            calc(100% - 0.35rem) 4.65rem,
+            calc(100% - 0.40rem) 4.71rem,
+            calc(100% - 0.45rem) 4.77rem,
+            calc(100% - 0.48rem) 4.85rem,
+            calc(100% - 0.49rem) 4.92rem,
+            calc(100% - 0.50rem) 5.00rem,
+            calc(100% - 0.49rem) 5.08rem,
+            calc(100% - 0.48rem) 5.15rem,
+            calc(100% - 0.45rem) 5.23rem,
+            calc(100% - 0.40rem) 5.29rem,
+            calc(100% - 0.35rem) 5.35rem,
+            calc(100% - 0.29rem) 5.40rem,
+            calc(100% - 0.23rem) 5.45rem,
+            calc(100% - 0.15rem) 5.48rem,
+            calc(100% - 0.08rem) 5.49rem,
+            100% 5.5rem,
+            100% 100%,
+            0% 100%,
+            0.00rem 5.50rem,
+            0.08rem 5.49rem,
+            0.15rem 5.48rem,
+            0.23rem 5.45rem,
+            0.29rem 5.40rem,
+            0.35rem 5.35rem,
+            0.40rem 5.29rem,
+            0.45rem 5.23rem,
+            0.48rem 5.15rem,
+            0.49rem 5.08rem,
+            0.50rem 5.00rem,
+            0.49rem 4.92rem,
+            0.48rem 4.85rem,
+            0.45rem 4.77rem,
+            0.40rem 4.71rem,
+            0.35rem 4.65rem,
+            0.29rem 4.60rem,
+            0.23rem 4.55rem,
+            0.15rem 4.52rem,
+            0.08rem 4.51rem,
+            0.00rem 4.50rem,
+            0% 0%);
+}

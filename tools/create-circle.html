@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <pre id="output">
+
+  </pre>
+  <script>
+    let xo = 0;
+    let yo = 5.0;
+    let sizex = 0.5;
+    let sizey = 0.5;
+    let steps = 10;
+
+    function create_c(rad) {
+      let r = '';
+      (new Array(steps)).fill(0).forEach((v, i) => {
+        let x = Math.cos(((i) / (steps)) * 0.5 * Math.PI + rad * Math.PI);
+        let y = Math.sin(((i) / (steps)) * 0.5 * Math.PI + rad * Math.PI);
+        let xf = xo + x * sizey;
+        let yf = yo + -y * sizex;
+        if (Math.abs(xf) < Number.EPSILON) xf = -xf;
+        if (Math.abs(yf) < Number.EPSILON) yf = -yf;
+        
+        r += `${xf.toFixed(2)}rem ${yf.toFixed(2)}rem,\n`;
+      });
+      return r;
+    }
+    document.getElementById('output').innerHTML = [0.5, 1.0, 1.5, 0.0].map((v) => `rad ${v}\n${create_c(v)}`).join('\n');
+  </script>
+</body>
+
+</html>

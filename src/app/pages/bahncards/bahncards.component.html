@@ -1,0 +1,16 @@
+<div class="nav-db flex h-14 shadow-xl items-center">
+  <a routerLink="/tickets"><img class="ml-3 mr-7 w-6" src="assets/icons/ic_arrow_back_black_24.svg"></a>
+  <span class="font-bold" style="font-size: 1.05rem;">BahnCard anzeigen</span>
+  <img class="w-6 ml-auto mr-3" src="assets/icons/ic_filter.svg">
+</div>
+<div class="px-5 py-[40vh] text-center">Ziehen Sie die Ansicht zum Laden neuer BahnCards nach unten und überprüfen Sie Ihre Filtereinstellungen.</div>
+<dialog id="my_bahncards_modal" class="modal">
+  <form method="dialog" class="modal-box bg-white rounded-sm px-4 pt-4 pb-2">
+    <h3 class="font-bold text-lg" style="font-family: Arial, sans-serif;">Technisher Fehler</h3>
+    <p class="pt-2 pb-3">Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.</p>
+    <button class="p-3 text-sm text-db-red active:bg-gray-300">OK</button>
+  </form>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>

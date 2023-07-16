@@ -1,0 +1,23 @@
+<div *ngIf="ticket" class="mx-auto mt-4 mb-5 ticket-wrap">
+  <a class="cursor-pointer" (click)="select()">
+    <div class="ticket bg-white rounded-md">
+      <div class="px-2.5 flex h-20 items-center ticket-top bg-db-ticket-blue">
+        <img class="p-2.5 h-14 w-auto" src="assets/icons/ic_qr_code.webp">
+        <div>
+          <p class="font-bold">{{ticket.getDate()}}</p>
+          <p class="font-bold">{{ticket.getID()}}</p>
+        </div>
+      </div>
+      <hr>
+      <div class="py-3 px-5">
+        <p class="text-xs">Reiseplan</p>
+        <p class="">{{ticket.getStart()}}</p>
+        <p class="">{{ticket.getEnd()}}</p>
+      </div>
+      <div class="px-5 pt-10 pb-3 flex flex-row items-center invisible">
+        <img class="w-5" src="assets/icons/ic_comfort.png">
+        <div class="ml-1 text-xs">Komfort Check-in möglich</div>
+      </div>
+    </div>
+  </a>
+</div>
