@@ -1,4 +1,4 @@
-import { NgModule, isDevMode } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -20,6 +20,7 @@ import { JourneyService } from './shared/journey/journey.service';
 import { FahrplanComponent } from './pages/fahrplan/fahrplan.component';
 import { AuthorizationComponent } from './pages/authorization/authorization.component';
 import { AuthService } from './shared/auth/auth.service';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -40,12 +41,12 @@ import { AuthService } from './shared/auth/auth.service';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    // ServiceWorkerModule.register('ngsw-worker.js', {
-    //   enabled: !isDevMode(),
-    //   // Register the ServiceWorker as soon as the application is stable
-    //   // or after 5 seconds (whichever comes first).
-    //   registrationStrategy: 'registerWhenStable:5000'
-    // })
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 5 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:5000'
+    })
   ],
   providers: [
     TicketService,
